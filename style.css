@@ -1,0 +1,275 @@
+@font-face {
+font-family: "XITS";
+src: 
+url("fonts/xits-math.otf"),
+url("fonts/XITSMath.ttf"),
+url("fonts/XITSMath.woff");
+}
+
+html, body
+{
+	font-size: 17px;
+	font-family: "Crimson text", serif;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.left
+{
+	float: left;
+}
+.caption{
+	clear:both;
+}
+.right
+{
+	float:right;
+}
+
+figcaption{
+	text-align: center;
+}
+
+figcaption.subheader
+{
+	font-weight: 800;
+}
+
+figure{
+	max-width: 40%;
+}
+
+.chapter-title *
+{
+	margin: 0 0;
+	line-height: 120%;
+}
+
+.chapter-title h2
+{
+	color: rgb(128,128,128);
+	font-size: 80%;
+}
+
+.chapter-title h1
+{
+	font-size: 2.5em;
+}
+
+@media all and (max-width: 500px) {
+  figure{
+	  float:none;
+  }
+}
+
+h2,h3,h4,h5,h6,h7{
+	font-size:1em;
+}
+
+body{
+	background-color: #eaeaea;
+}
+
+main
+{
+	background-color: white;
+	padding: 15px 25px;
+	max-width: 525px;
+	margin: 0 auto;
+	position:relative;
+	z-index: 10;
+}
+/*
+@media all and (max-width: 900px) {
+  main
+  {
+	  
+  }
+}
+@media all and (min-width: 901px) {
+  main
+  {
+	  
+	  /*margin: 0 auto;
+	position: absolute;
+	right: 10%;
+	border-left: 10px solid #454460;
+  }
+}*/
+
+img.scaled
+{
+	width:100%;
+}
+
+p{
+	line-height: 161.8%;
+	margin:0;
+	margin-bottom: 1em;
+}
+
+p.math
+{
+	line-height: 100%;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.key-term {
+	color: rgb(255,165,0);
+}
+
+.math
+{
+	font-family: XITS, sans-serif;
+	
+}
+
+.example
+{
+	margin-left: 40px;
+}
+
+table{
+	border-collapse: collapse;
+	font-size: inherit;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+	text-align: left;
+	padding: 5px 15px;
+}
+
+th{
+	font-weight:bold;
+	
+}
+
+table.before-after th,td
+{
+	    border-bottom: 0;
+}
+
+ol.question-list
+{
+	list-style-type:decimal;
+}
+
+ol.question-part-list
+{
+	counter-reset: list;
+}
+
+ol.question-part-list > li{
+	list-style: none;
+	position: relative;
+}
+
+ol.question-part-list >li:before{
+	content: counter(list,lower-alpha) ") ";
+	counter-increment: list;
+	position: absolute;
+    left: -1.4em;
+}
+
+.problems h1, h2,h3{
+	margin-top:0;
+	margin-bottom:0;
+}
+
+table.explanation-example{
+	border:0
+	
+}
+
+.line .right
+{
+	margin-left: 5em;
+}
+
+span.left-side
+{
+	text-align:right;
+	display:table-cell;
+	width:5em;
+}
+
+span.right-side
+{
+	text-align:left;
+	display:table-cell;
+	width:5em;
+}
+
+span.middle{
+	display:table-cell;
+	padding: 0 0.5em;
+}
+section.questions
+{
+	min-height:100vh;
+	margin-top: 1em;
+}
+
+.lesson-toggle
+{
+	width: 40px;	/*acutal width is 40px. 70px is for transition*/
+	height: 40px;
+	
+	
+	background-color: black;
+	color:white;
+	text-align: center;
+	cursor: pointer;
+	z-index: 11;
+}
+
+.lesson-toggle:hover
+{
+	width: 70px;
+}
+
+#show-lesson
+{
+	position: fixed;
+	left: -webkit-calc(50% - 327.5px);/*50% - width of main article + our width (as a not pulled out)*/
+	left: calc(50% - 327.5px);
+	top: 50;
+	border-radius: 15px 0 0 15px;
+	
+	display:none;
+	
+}
+
+#hide-lesson
+{
+	position: fixed;
+	/*left: -webkit-calc(50% - 327.5px);/*50% - width of main article + our width (as a not pulled out)*/
+	left: 100%;
+	top: 50;
+	border-radius: 0 15px 15px 0;
+	display:none;
+	z-index:100;
+}
+
+
+#show-lesson:hover
+{
+	left: -webkit-calc(50% - 357.5px);
+	left: calc(50% - 357.5px);
+	
+}
+
+
+.arrow
+{
+	width: 40px;
+	line-height: 40px;
+	height:40px;
+}
